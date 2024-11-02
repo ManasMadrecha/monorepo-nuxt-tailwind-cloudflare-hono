@@ -1,7 +1,7 @@
 {
-  "name": "mono-nuxt-cloudflare-hono-template",
+  "name": "monorepo-nuxt-tailwind-cloudflare-hono",
   "version": "1.0.0",
-  "description": "Monorepo template for Nuxt 3 web app and website, using Cloudflare Workers with Hono for backend.",
+  "description": "Monorepo template for multiple Nuxt web apps, multiple Cloudflare Workers with Hono for backend, and one Website.",
   "author": "ManasMadrecha",
   "funding": {
     "type": "github",
