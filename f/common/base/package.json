@@ -1,0 +1,42 @@
+{
+  "name": "base",
+  "version": "1.0.0",
+  "description": "Shared base layer for Nuxt projects",
+  "private": true,
+  "type": "module",
+  "main": "./nuxt.config.ts",
+  "scripts": {
+    "dev": "nuxt dev --port=3001",
+    "prepare": "nuxt prepare",
+    "build": "nuxt build --preset cloudflare-pages",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "dependencies": {
+    "@egoist/tailwindcss-icons": "^1.8.1",
+    "@iconify/json": "^2.2.266",
+    "@nuxt/scripts": "^0.9.5",
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@pinia/nuxt": "^0.6.1",
+    "@tailwindcss/typography": "^0.5.15",
+    "@vueuse/core": "^11.2.0",
+    "@vueuse/nuxt": "^11.2.0",
+    "daisyui": "^4.12.14",
+    "nanoid": "5.0.8",
+    "pinia": "^2.2.5",
+    "radix-vue": "^1.9.7",
+    "sass-embedded": "^1.80.5",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss": "^3.4.14",
+    "vaul-vue": "^0.2.0",
+    "vue-sonner": "^1.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.0",
+    "nuxt": "^3.13.2",
+    "typescript": "^5.6.3",
+    "vue": "latest"
+  }
+}

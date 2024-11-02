@@ -1,0 +1,23 @@
+{
+  "emmet.includeLanguages": {
+    "postcss": "css",
+    "markdown": "html"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss",
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.experimental.configFile": {
+    "./f/common/base/tailwind.config.ts": [
+      "./f/common/base/**",
+      "./f/apps/app1/**",
+      "./f/website/**"
+    ],
+    "./f/apps/app1/tailwind.config.ts": "./f/apps/app1/**",
+    // "./f/apps/app2/tailwind.config.ts": "./f/apps/app2/**",
+    "./f/website/tailwind.config.ts": "./f/website/**"
+  }
+}

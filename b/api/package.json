@@ -1,0 +1,23 @@
+{
+  "name": "worker-name-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --remote",
+    "dev-local": "wrangler dev",
+    "deploy": "wrangler deploy --minify src/index.ts"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "hono": "^4.6.8",
+    "nanoid": "^5.0.8",
+    "ofetch": "^1.4.1",
+    "slugify": "^1.6.6",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241022.0",
+    "wrangler": "^3.84.0"
+  }
+}

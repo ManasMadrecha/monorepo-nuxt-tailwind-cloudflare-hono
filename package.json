@@ -1,0 +1,45 @@
+{
+  "name": "mono-nuxt-cloudflare-hono-template",
+  "version": "1.0.0",
+  "description": "Monorepo template for Nuxt 3 web app and website, using Cloudflare Workers with Hono for backend.",
+  "author": "ManasMadrecha",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/ManasMadrecha"
+  },
+  "workspaces": [
+    "b/api",
+    "f/common/base",
+    "f/apps/app1",
+    "f/apps/app2",
+    "f/website"
+  ],
+  "scripts": {
+    "i:b:api": "npm i --workspace=b/api",
+    "i:f:common:base": "npm i --workspace=f/common/base",
+    "i:f:website": "npm run i:f:common:base && npm i --workspace=f/website",
+    "i:f:apps:app1": "npm run i:f:common:base && npm i --workspace=f/apps/app1",
+    "i:b": "npm run i:b:api",
+    "i:f": "npm run i:f:common:base && npm run i:f:website && npm run i:f:apps:app1",
+    "i:all": "npm run i:b && npm run i:f",
+    "dev:b:api": "npm run dev --workspace=b/api",
+    "prepare:f:common:base": "npm run prepare --workspace=f/common/base",
+    "dev:f:apps:app1": "npm run prepare:f:common:base && npm run dev:s --workspace=f/apps/app1",
+    "dev:f:website": "npm run prepare:f:common:base && npm run dev:s --workspace=f/website",
+    "dev:b": "npm run dev:b:api",
+    "dev:f": "npm run dev:f:apps:app1 && npm run dev:f:website",
+    "dev:all": "npm run dev:b && npm run dev:f",
+    "build:b:api": "npm run build --workspace=b/api",
+    "build:f:apps:app1": "npm run build --workspace=f/apps/app1",
+    "build:f:website": "npm run build --workspace=f/website",
+    "build:f": "npm run build:f:apps:app1 && npm run build:f:website",
+    "build:all": "npm run build:b && npm run build:f",
+    "deploy:b:api": "npm run deploy --workspace=b/api",
+    "deploy:f:apps:app1": "npm run deploy --workspace=f/apps/app1",
+    "deploy:f:apps": "npm run deploy:f:apps:app1",
+    "deploy:f:website": "npm run deploy --workspace=f/website",
+    "deploy:b": "npm run deploy:b:api",
+    "deploy:f": "npm run deploy:f:apps && npm run deploy:f:website",
+    "deploy:all": "npm run deploy:b && npm run deploy:f"
+  }
+}

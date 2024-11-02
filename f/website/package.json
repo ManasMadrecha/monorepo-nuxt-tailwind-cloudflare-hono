@@ -1,0 +1,26 @@
+{
+  "name": "crm-website",
+  "version": "1.0.0",
+  "description": "CRM for managing customers and sales",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "cert": "mkcert -key-file=./_certs/localhost+2-key.pem -cert-file=./_certs/localhost+2.pem localhost 127.0.0.1 ::1",
+    "dev": "nuxt dev --port=3020",
+    "dev:s": "npm run cert && nuxt dev --port=3020 --https=true --ssl-cert=./_certs/localhost+2.pem --ssl-key=./_certs/localhost+2-key.pem",
+    "build": "nuxi build --preset cloudflare-pages",
+    "generate": "nuxt generate",
+    "deploy": "wrangler pages deploy dist",
+    "upload": "npm run build && npm run deploy",
+    "preview": "nuxt preview",
+    "preview:cf": "wrangler pages dev dist"
+  },
+  "devDependencies": {
+    "nuxt": "^3.13.2",
+    "wrangler": "^3.84.0"
+  },
+  "dependencies": {
+    "vue": "latest",
+    "vue-router": "latest"
+  }
+}

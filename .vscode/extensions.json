@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "tamasfe.even-better-toml",
+    "vue.volar",
+    "sdras.vue-vscode-snippets",
+    "naumovs.color-highlight"
+  ]
+}
